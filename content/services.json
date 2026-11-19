@@ -1,0 +1,59 @@
+{
+  "services": [
+    {
+      "name": "UI/UX Design",
+      "tags": "Research · Flows · Interfaces",
+      "description": "Interfaces planned around what people need to do, then designed with care down to the last hover state.",
+      "includes": [
+        "User research",
+        "Wireframes & flows",
+        "UI design",
+        "Interactive prototypes"
+      ]
+    },
+    {
+      "name": "Design Systems",
+      "tags": "Tokens · Components · Docs",
+      "description": "One shared language for your product: tokens, components and rules that keep every screen consistent as you grow.",
+      "includes": [
+        "Design tokens",
+        "Component libraries",
+        "Figma libraries",
+        "Documentation"
+      ]
+    },
+    {
+      "name": "Visual Identity",
+      "tags": "Logo · Type · Colour",
+      "description": "A mark, a palette and a voice that fit together and work as well on a phone screen as on a shop window.",
+      "includes": [
+        "Logo & wordmark",
+        "Typography & colour",
+        "Brand guidelines",
+        "Brand assets"
+      ]
+    },
+    {
+      "name": "Graphic Design",
+      "tags": "Print · Social · Campaigns",
+      "description": "Posters, social posts, presentations and print that carry your identity with one clear look.",
+      "includes": [
+        "Social content",
+        "Print & editorial",
+        "Presentations",
+        "Campaign visuals"
+      ]
+    },
+    {
+      "name": "Web & Application",
+      "tags": "Websites · Web apps · Launch",
+      "description": "We build what we design: fast, accessible websites and applications that are easy to update after launch.",
+      "includes": [
+        "Websites",
+        "Web applications",
+        "CMS setup",
+        "Launch & support"
+      ]
+    }
+  ]
+}

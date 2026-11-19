@@ -1,0 +1,283 @@
+{
+  "projects": [
+    {
+      "title": "Pinogo",
+      "slug": "kutr",
+      "tags": [
+        "Web design",
+        "Development",
+        "Brand Identity"
+      ],
+      "custom_page": true,
+      "cover_background": "#262626"
+    },
+    {
+      "title": "Sehre Innovative Company",
+      "slug": "sehre",
+      "tags": [
+        "Brand identity",
+        "Logo",
+        "Stationery",
+        "App icon"
+      ],
+      "cover": "images/sehre-logo-on-deep-red.jpg",
+      "cover_alt": "Sehre logo on deep red",
+      "cover_background": "#6a0012",
+      "subtitle": "Brand identity · 2022",
+      "hero": {
+        "image": "images/sehre-logo-persian-wordmark-and-round-symbol-in.jpg",
+        "alt": "Sehre logo, Persian wordmark and round symbol, in cream on a deep red gradient",
+        "background": "#6a0012",
+        "ratio": "7:4"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "label": "The brand",
+          "body": "A bilingual identity for **Sehre Innovative Company** (<span class=\"fa\" lang=\"fa\" dir=\"rtl\">ایده‌پردازان هوشمند سهره</span>), a technology company.\n\nA round, bird-like **symbol** sits next to a **Persian wordmark** built on the same grid, in a palette of **deep cherry red**, warm whites and near-black."
+        },
+        {
+          "type": "palette",
+          "label": "Colour",
+          "colors": [
+            {
+              "name": "Space Cherry",
+              "hex": "#990012"
+            },
+            {
+              "name": "Porcelain",
+              "hex": "#FDFBF7"
+            },
+            {
+              "name": "Parchment",
+              "hex": "#F0EEE9"
+            },
+            {
+              "name": "Jet Black",
+              "hex": "#252B36"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": "images/construction-grid-for-the-sehre-logo-lockup.jpg",
+          "alt": "Construction grid for the Sehre logo lockup",
+          "caption_left": "Grid",
+          "caption_right": "Symbol + wordmark proportions",
+          "frame": false
+        },
+        {
+          "type": "image",
+          "image": "images/sehre-id-card-on-a-lanyard-and-two-business-card.jpg",
+          "alt": "Sehre ID card on a lanyard and two business cards",
+          "caption_left": "Stationery",
+          "caption_right": "ID card · Business cards",
+          "frame": false
+        },
+        {
+          "type": "two",
+          "left": {
+            "image": "images/sehre-app-icon-on-a-phone-home-screen-with-the-i.jpg",
+            "alt": "Sehre app icon on a phone home screen, with the icon construction grid",
+            "caption_left": "App icon",
+            "caption_right": "2022"
+          },
+          "right": {
+            "image": "images/sehre-logo-in-cream-on-near-black.jpg",
+            "alt": "Sehre logo in cream on near-black",
+            "caption_left": "Logo",
+            "caption_right": "Dark version"
+          }
+        },
+        {
+          "type": "link",
+          "label": "Full project",
+          "text": "See the full identity on Behance ↗",
+          "url": "https://www.behance.net/gallery/251480459/Sehre-Inovative-Company-BRAND-IDENTITY"
+        }
+      ]
+    },
+    {
+      "title": "YAD Studio",
+      "slug": "yoga",
+      "tags": [
+        "Visual identity",
+        "Logo",
+        "Motion"
+      ],
+      "cover": "images/yad-studio-invitation-card-leaning-on-a-ceramic.jpg",
+      "cover_alt": "YAD Studio invitation card leaning on a ceramic ring",
+      "cover_background": "#d6d6cf",
+      "subtitle": "Visual identity for a yoga studio",
+      "hero": {
+        "image": "images/yad-logo-motion.gif",
+        "alt": "YAD Studio logo animation: the Y mark draws itself, then the wordmark appears",
+        "background": "#5f7470",
+        "ratio": "7:4"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "label": "The idea",
+          "body": "The logo is inspired by **the letter Y**, **a leaf motif** and the **bound angle yoga pose**.\n\nThree overlapping circles give the mark its curves, so the same shape reads as a letter, a growing leaf and a body at rest."
+        },
+        {
+          "type": "image",
+          "image": "images/construction-of-the-yad-mark-from-three-overlapp.jpg",
+          "alt": "Construction of the YAD mark from three overlapping circles",
+          "caption_left": "Construction",
+          "caption_right": "Y · Leaf · Bound angle pose",
+          "frame": false
+        },
+        {
+          "type": "two",
+          "left": {
+            "image": "images/yad-studio-logo-lockup-in-cream-on-sage-green.jpg",
+            "alt": "YAD Studio logo lockup in cream on sage green",
+            "caption_left": "Logo",
+            "caption_right": "Mark + wordmark"
+          },
+          "right": {
+            "image": "images/yad-mark-in-sage-green-on-cream.jpg",
+            "alt": "YAD mark in sage green on cream",
+            "caption_left": "Symbol",
+            "caption_right": "Sage on cream"
+          }
+        },
+        {
+          "type": "text",
+          "label": "Pattern",
+          "body": "The arcs of the mark repeat into a **pattern** that carries the identity onto merchandise and activewear."
+        },
+        {
+          "type": "image",
+          "image": "images/yad-arc-pattern-in-cream-lines-on-sage-and-the-s.jpg",
+          "alt": "YAD arc pattern in cream lines on sage, and the same pattern printed on a tote bag",
+          "caption_left": "Pattern",
+          "caption_right": "Tote bag",
+          "frame": false
+        },
+        {
+          "type": "image",
+          "image": "images/yad-pattern-in-soft-sage-tones-and-on-leggings-w.jpg",
+          "alt": "YAD pattern in soft sage tones, and on leggings with a YAD Studio waistband",
+          "caption_left": "Pattern",
+          "caption_right": "Activewear",
+          "frame": false
+        },
+        {
+          "type": "image",
+          "image": "images/rolled-yoga-mat-with-the-yad-arc-pattern-and-a-y.jpg",
+          "alt": "Rolled yoga mat with the YAD arc pattern and a YAD Studio carry strap",
+          "caption_left": "Pattern",
+          "caption_right": "Yoga mat",
+          "frame": false
+        },
+        {
+          "type": "image",
+          "image": "images/three-yad-studio-blog-cards-inner-stillness-outw.jpg",
+          "alt": "Three YAD Studio blog cards: Inner Stillness, Outward Flow, and An Experience That Is Not Only Luxurious, But Also Accessible And Sustainable",
+          "caption_left": "Blog",
+          "caption_right": "Article cards",
+          "frame": false
+        },
+        {
+          "type": "image",
+          "image": "images/three-yad-studio-posters-inner-stillness-blog-po.jpg",
+          "alt": "Three YAD Studio posters: Inner Stillness blog poster, a pose with the YAD arc, and a 2 December 2025 invitation",
+          "caption_left": "Print",
+          "caption_right": "Posters",
+          "frame": false
+        },
+        {
+          "type": "image",
+          "image": "images/yad-studio-invitation-card-for-2-december-2025-p.jpg",
+          "alt": "YAD Studio invitation card for 2 December 2025, printed and flat",
+          "caption_left": "Print",
+          "caption_right": "Invitation card",
+          "frame": false
+        },
+        {
+          "type": "link",
+          "label": "Full project",
+          "text": "See the full identity on Behance ↗",
+          "url": "https://www.behance.net/gallery/240449357/Yoga-Studio-Visual-Identity"
+        }
+      ]
+    },
+    {
+      "title": "KUTR Studio Branding",
+      "slug": "branding",
+      "tags": [
+        "Visual branding",
+        "Logo",
+        "Identity"
+      ],
+      "cover": "images/kutr-pigeon.gif",
+      "cover_alt": "Animated KUTR pixel pigeon",
+      "cover_background": "#2150c4",
+      "subtitle": "Visual branding · 2025",
+      "hero": {
+        "image": "images/kutr-pigeon.gif",
+        "alt": "Animated pixel pigeon, the KUTR mascot, landing and taking off",
+        "background": "#2150c4",
+        "ratio": "14:9"
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "label": "About KUTR Studio",
+          "body": "Discover **KUTR, a design studio** built around **simplicity, clarity, and human connection.** Why a pigeon? Because just like a small messenger, it brings bits of content and meaning to its audience, piece by piece.\n\nAt its core, KUTR focuses on **UX and human interaction**, translating ideas into experiences that feel natural and purposeful. Every detail of the identity reflects this vision: approachable, dynamic, and rooted in thoughtful design."
+        },
+        {
+          "type": "image",
+          "image": "images/kutr-logo-a-pixel-pigeon-above-the-kutr-wordmark.jpg",
+          "alt": "KUTR logo: a pixel pigeon above the KUTR wordmark, in blue on a dot grid",
+          "caption_left": "Logo",
+          "caption_right": "Pixel pigeon + wordmark",
+          "frame": true
+        },
+        {
+          "type": "image",
+          "image": "images/kutr-logo-reversed-white-pixel-pigeon-and-wordma.jpg",
+          "alt": "KUTR logo reversed: white pixel pigeon and wordmark on KUTR blue with a dot grid",
+          "caption_left": "Logo",
+          "caption_right": "Reversed on blue",
+          "frame": true
+        },
+        {
+          "type": "image",
+          "image": "images/kutr-wordmark-with-creative-design-studio-in-whi.jpg",
+          "alt": "KUTR wordmark with CREATIVE DESIGN STUDIO, in white on blue and in blue on white",
+          "caption_left": "Wordmark",
+          "caption_right": "Horizontal lockup",
+          "frame": true
+        },
+        {
+          "type": "image",
+          "image": "images/kutr-letterhead-and-envelope-in-blue-and-white.jpg",
+          "alt": "KUTR letterhead and envelope in blue and white",
+          "caption_left": "Stationery",
+          "caption_right": "Letterhead + envelope",
+          "frame": true
+        },
+        {
+          "type": "list",
+          "label": "Brand personality",
+          "items": [
+            "Creativity",
+            "Teamwork",
+            "Problem solving",
+            "Knowledge sharing"
+          ]
+        },
+        {
+          "type": "link",
+          "label": "Full project",
+          "text": "See the full branding on Behance ↗",
+          "url": "https://www.behance.net/gallery/236553161/KUTR-STUDIO-visual-branding"
+        }
+      ]
+    }
+  ]
+}

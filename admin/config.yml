@@ -1,0 +1,195 @@
+# KUTR Studio content dashboard (Sveltia CMS). Open https://kutr.studio/admin/
+backend:
+  name: github
+  repo: studiokutr/studiokutr-kutr-studio
+  branch: main
+  commit_messages:
+    update: "Update {{slug}} from the dashboard"
+    uploadMedia: "Upload {{path}} from the dashboard"
+    deleteMedia: "Delete {{path}} from the dashboard"
+
+site_url: https://kutr.studio
+display_url: https://kutr.studio
+logo_url: /images/kutr-logo-a-pixel-pigeon-above-the-kutr-wordmark.jpg
+
+media_folder: images
+public_folder: /images
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  - name: content
+    label: Website
+    editor:
+      preview: false
+    files:
+      # ---------------- PROJECTS ----------------
+      - name: projects
+        label: Projects
+        file: content/projects.json
+        format: json
+        fields:
+          - name: projects
+            label: Projects (drag to reorder, the first one shows first)
+            widget: list
+            summary: "{{fields.title}}"
+            collapsed: true
+            fields:
+              - { name: title, label: Title, widget: string }
+              - name: slug
+                label: Page address
+                widget: string
+                hint: "Short lowercase name used in the link, e.g. yoga makes kutr.studio/#work-yoga. Letters, numbers and dashes only. Don't change it once the project is live."
+                pattern: ['^[a-z0-9-]+$', 'Use lowercase letters, numbers and dashes only']
+              - name: hidden
+                label: Hide from the Projects page
+                widget: boolean
+                default: false
+                required: false
+              - name: custom_page
+                label: Uses the built-in custom page (Pinogo only)
+                widget: boolean
+                default: false
+                required: false
+                hint: Leave this off for new projects. When on, only the title, tags and cover below are used.
+              - { name: tags, label: Tags (shown on the card), widget: list, field: { name: tag, label: Tag, widget: string }, required: false }
+              - name: cover
+                label: Card cover image
+                widget: image
+                required: false
+                hint: "1860 × 1500 px (1.24 : 1) works best. JPG, PNG or GIF."
+              - { name: cover_alt, label: Cover description (for screen readers), widget: string, required: false }
+              - { name: cover_background, label: Cover background colour, widget: color, required: false, default: "#262626" }
+              - { name: subtitle, label: Line under the title on the project page, widget: string, required: false }
+              - name: hero
+                label: Big image at the top of the project page
+                widget: object
+                required: false
+                collapsed: true
+                fields:
+                  - { name: image, label: Image, widget: image, required: false }
+                  - { name: alt, label: Image description, widget: string, required: false }
+                  - { name: background, label: Background colour, widget: color, required: false, default: "#262626" }
+                  - name: ratio
+                    label: Shape
+                    widget: select
+                    default: "7:4"
+                    options:
+                      - { label: "Wide (7 : 4)", value: "7:4" }
+                      - { label: "Medium (14 : 9)", value: "14:9" }
+                      - { label: "Cinema (2.25 : 1)", value: "9:4" }
+                      - { label: "Square (1 : 1)", value: "1:1" }
+              - name: blocks
+                label: Page sections (drag to reorder)
+                widget: list
+                required: false
+                collapsed: true
+                typeKey: type
+                types:
+                  - name: text
+                    label: Text
+                    summary: "Text: {{fields.label}}"
+                    fields:
+                      - { name: label, label: Small label on the left, widget: string, required: false }
+                      - { name: body, label: Text, widget: markdown, buttons: [bold, link], editor_components: [], modes: [rich_text, raw], hint: "Bold words show darker. Leave an empty line between paragraphs." }
+                  - name: image
+                    label: Image
+                    summary: "Image: {{fields.caption_left}} · {{fields.caption_right}}"
+                    fields:
+                      - { name: image, label: Image, widget: image }
+                      - { name: alt, label: Image description, widget: string, required: false }
+                      - { name: caption_left, label: Caption left, widget: string, required: false }
+                      - { name: caption_right, label: Caption right, widget: string, required: false }
+                      - { name: frame, label: Thin frame around the image, widget: boolean, default: false, required: false }
+                  - name: two
+                    label: Two images side by side
+                    summary: "Two images"
+                    fields:
+                      - name: left
+                        label: Left
+                        widget: object
+                        fields:
+                          - { name: image, label: Image, widget: image }
+                          - { name: alt, label: Image description, widget: string, required: false }
+                          - { name: caption_left, label: Caption left, widget: string, required: false }
+                          - { name: caption_right, label: Caption right, widget: string, required: false }
+                      - name: right
+                        label: Right
+                        widget: object
+                        fields:
+                          - { name: image, label: Image, widget: image }
+                          - { name: alt, label: Image description, widget: string, required: false }
+                          - { name: caption_left, label: Caption left, widget: string, required: false }
+                          - { name: caption_right, label: Caption right, widget: string, required: false }
+                  - name: palette
+                    label: Colour palette
+                    summary: "Palette: {{fields.label}}"
+                    fields:
+                      - { name: label, label: Label, widget: string, default: Colour }
+                      - name: colors
+                        label: Colours (the first one is shown biggest)
+                        widget: list
+                        summary: "{{fields.name}} {{fields.hex}}"
+                        fields:
+                          - { name: name, label: Name, widget: string }
+                          - { name: hex, label: Colour, widget: color }
+                  - name: list
+                    label: Word list (e.g. brand personality)
+                    summary: "List: {{fields.label}}"
+                    fields:
+                      - { name: label, label: Label, widget: string }
+                      - { name: items, label: Words (up to 4 per row), widget: list, field: { name: item, label: Word, widget: string } }
+                  - name: link
+                    label: Link (e.g. Behance)
+                    summary: "Link: {{fields.text}}"
+                    fields:
+                      - { name: label, label: Small label on the left, widget: string, default: Full project }
+                      - { name: text, label: Link text, widget: string }
+                      - { name: url, label: Address, widget: string }
+
+      # ---------------- TEAM ----------------
+      - name: team
+        label: Team
+        file: content/team.json
+        format: json
+        fields:
+          - name: members
+            label: Team members (drag to reorder)
+            widget: list
+            summary: "{{fields.name}} · {{fields.role}}"
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: role, label: Role, widget: string }
+              - { name: photo, label: Portrait, widget: image, hint: "Square image, e.g. 360 × 360 px pixel portrait" }
+              - { name: linkedin, label: LinkedIn address, widget: string, required: false }
+
+      # ---------------- SERVICES ----------------
+      - name: services
+        label: Services
+        file: content/services.json
+        format: json
+        fields:
+          - name: services
+            label: Services (drag to reorder)
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: tags, label: Short line (e.g. Logo · Type · Colour), widget: string, required: false }
+              - { name: description, label: Description, widget: text, required: false }
+              - { name: includes, label: What's included, widget: list, field: { name: item, label: Item, widget: string }, required: false }
+
+      # ---------------- SETTINGS ----------------
+      - name: settings
+        label: Contact and intro texts
+        file: content/settings.json
+        format: json
+        fields:
+          - { name: email, label: Contact email (also where the form sends), widget: string }
+          - { name: about_intro, label: About page intro, widget: text }
+          - { name: hello_text, label: '"Say Hello" text at the bottom of every page', widget: text }
+          - { name: instagram, label: Instagram address, widget: string, required: false }
+          - { name: linkedin, label: LinkedIn address, widget: string, required: false }
+          - { name: behance, label: Behance address, widget: string, required: false }
