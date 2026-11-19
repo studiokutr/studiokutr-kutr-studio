@@ -10,7 +10,7 @@ backend:
 
 site_url: https://kutr.studio
 display_url: https://kutr.studio
-logo_url: /images/kutr-logo-a-pixel-pigeon-above-the-kutr-wordmark.jpg
+logo_url: ../images/kutr-logo-a-pixel-pigeon-above-the-kutr-wordmark.jpg
 
 media_folder: images
 public_folder: /images
