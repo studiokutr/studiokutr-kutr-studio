@@ -721,7 +721,6 @@ pre.viewer .caret{display:inline-block;width:7px;height:13px;background:var(--si
         <div class="f"><label for="cf-email">Email <b>*</b></label><input id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@company.com"><span class="err"></span></div>
         <div class="f wide"><label for="cf-co">Company</label><input id="cf-co" name="company" autocomplete="organization" placeholder="Optional"></div>
         <div class="f wide"><span class="lg">What do you need?</span><div class="chips" role="group" aria-label="Services"><button type="button" aria-pressed="false" data-g="svc">UI/UX Design</button><button type="button" aria-pressed="false" data-g="svc">Design Systems</button><button type="button" aria-pressed="false" data-g="svc">Visual Identity</button><button type="button" aria-pressed="false" data-g="svc">Graphic Design</button><button type="button" aria-pressed="false" data-g="svc">Web &amp; Application</button></div></div>
-        <div class="f wide"><span class="lg">Budget</span><div class="chips" role="group" aria-label="Budget" data-single><button type="button" aria-pressed="false" data-g="bud">Under €5k</button><button type="button" aria-pressed="false" data-g="bud">€5k – €15k</button><button type="button" aria-pressed="false" data-g="bud">€15k – €40k</button><button type="button" aria-pressed="false" data-g="bud">€40k+</button><button type="button" aria-pressed="false" data-g="bud">Not sure yet</button></div></div>
         <div class="f wide"><label for="cf-msg">Message <b>*</b></label><textarea id="cf-msg" name="message" rows="4" placeholder="What are you working on, and when do you need it?"></textarea><span class="err"></span></div>
         <div class="send"><small>Sending opens your email app with the message ready to go to contact@kutr.studio.</small><button class="btn" type="submit">Send message <i></i></button></div>
         <div class="done" role="status"><b>Thanks, your message is ready.</b><span>Your email app should open with everything filled in. If it doesn't, write to <a href="mailto:contact@kutr.studio">contact@kutr.studio</a>.</span></div>
@@ -908,7 +907,7 @@ $$('.cform').forEach(box => {
     ok = bad('message', v('message') ? '' : 'Please write a short message') && ok;
     if (!ok) { const first = $('.f.bad input, .f.bad textarea', f); if (first) first.focus(); return; }
     const pick = n => $$(`button[data-g="${n}"][aria-pressed="true"]`, f).map(b => b.textContent).join(', ') || '-';
-    const body = [`Name: ${v('name')}`, `Email: ${v('email')}`, `Company: ${v('company') || '-'}`, `Services: ${pick('svc')}`, `Budget: ${pick('bud')}`, '', v('message')].join('\n');
+    const body = [`Name: ${v('name')}`, `Email: ${v('email')}`, `Company: ${v('company') || '-'}`, `Services: ${pick('svc')}`, '', v('message')].join('\n');
     const href = `mailto:${EMAIL}?subject=${encodeURIComponent('New project: ' + v('name'))}&body=${encodeURIComponent(body)}`;
     const link = document.createElement('a'); link.href = href; link.target = '_top'; document.body.appendChild(link); link.click(); link.parentNode.removeChild(link);
     box.classList.add('sent'); say('Opening your email app');
