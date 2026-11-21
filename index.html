@@ -528,7 +528,10 @@ pre.viewer .caret{display:inline-block;width:7px;height:13px;background:var(--si
 .case[data-view="work-kutr"]{--signal:#ffbd01}
 .case[data-view="work-kutr"] .cmp .btn:hover:not([disabled]),.case[data-view="work-kutr"] .deploy .go:hover{color:#0a0a0a}
 .case[data-view="work-kutr"] .cmp .pills span.warn{background:#3a2c00;border-color:#3a2c00}
-.case[data-view="work-kutr"] .hello-slot{--signal:#2c65f8}
+.case .pal-panel{--card:#1b1b1b;color:var(--paper);min-height:0;margin-bottom:clamp(40px,6vw,80px)}
+.case .pal-panel .sw{gap:10px}
+.case .pal-panel .sw .chip{aspect-ratio:auto;height:clamp(150px,18vw,260px)}
+.case .hello-slot{--signal:#2c65f8}
 </style></head><body>
 
 <div class="grid-lines" aria-hidden="true"><i></i></div>
@@ -786,9 +789,9 @@ window.KUTR_READY = (async () => {
       case 'image': return figure(b, (b.frame ? '' : ' flat') + ' rv');
       case 'two': return `<div class="two rv">${figure(b.left, ' flat')}${figure(b.right, ' flat')}</div>`;
       case 'palette': {
-        const cs = b.colors || []; const n = cs.length;
-        const cols = n >= 3 ? `5fr ${'1fr '.repeat(n - 2)}1.4fr` : `repeat(${Math.max(n, 1)},1fr)`;
-        return `<div class="persona-wrap rv"><p class="label">${esc(b.label || 'Colour')}</p><div class="pal" style="grid-template-columns:${cols}">${cs.map(c => `<div style="background:${esc(c.hex)};color:${lum(c.hex) > .55 ? '#0a0a0a' : '#fdfbf7'}"><span>Hex ${esc(String(c.hex || '').toUpperCase())}</span><b>${esc(c.name)}</b></div>`).join('')}</div></div>`;
+        const cs = b.colors || []; const n = Math.max(cs.length, 1);
+        const rgb = hex => { const h = String(hex || '#000').replace('#', ''); const x = parseInt(h.length === 3 ? h.split('').map(c => c + c).join('') : h, 16); return [(x >> 16) & 255, (x >> 8) & 255, x & 255].join(' '); };
+        return `<div class="persona-wrap rv"><p class="label">${esc(b.label || 'Colour')}</p><div class="panel pal-panel"><div class="label">Palette <span>Click to copy</span></div><div class="sw" data-pal style="grid-template-columns:repeat(${n},1fr)">${cs.map(c => { const hx = esc(String(c.hex || '').toUpperCase()); return `<button type="button" data-hex="${hx}" aria-label="Copy ${esc(c.name)} ${hx}"><div class="chip" style="background:${hx}"></div><div class="v"><b>${hx}</b>RGB ${rgb(c.hex)}<br>${esc(c.name)}<br><span class="cp">Copied</span></div></button>`; }).join('')}</div></div></div>`;
       }
       case 'list': return `<div class="persona-wrap rv"><p class="label">${esc(b.label)}</p><ul class="persona" style="padding:0;margin-top:0;grid-template-columns:repeat(${Math.min((b.items || []).length || 1, 4)},1fr)">${(b.items || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`;
       case 'link': return b.url ? `<div class="case-lite rv" style="padding-top:0"><span class="label">${esc(b.label)}</span><p><a href="${esc(b.url)}" target="_blank" rel="noopener" style="border-bottom:1px solid currentColor">${esc(b.text || b.url)} ↗</a></p></div>` : '';
@@ -799,7 +802,7 @@ window.KUTR_READY = (async () => {
   if (mount) mount.outerHTML = projects.filter(p => !p.custom_page).map(p => {
     const h = p.hero || {};
     const hero = h.image ? `<div class="hero img fade" style="--d:300;background:${esc(h.background || '#262626')};aspect-ratio:${esc(ratio(h.ratio))}"><img alt="${esc(h.alt || p.title)}" src="${src(h.image)}"></div>` : '';
-    return `<section class="view case" data-view="${route(p)}" aria-label="${esc(p.title)} case study" hidden>
+    return `<section class="view case" data-view="${route(p)}"${p.accent ? ` style="--signal:${esc(p.accent)}"` : ''} aria-label="${esc(p.title)} case study" hidden>
   <div class="wrap page">
     <a class="back" href="#projects">← All projects</a>
     <h1 data-split>${esc(p.title)}</h1>
@@ -829,6 +832,7 @@ window.KUTR_READY = (async () => {
   document.querySelectorAll('a[href^="mailto:contact@kutr.studio"]').forEach(a => { if (C.email) { a.href = 'mailto:' + C.email; if (a.textContent.includes('@')) a.textContent = C.email; } });
   (tpl ? [document.getElementById('cform-tpl')] : []).filter(Boolean).forEach(ct => ct.content.querySelectorAll('a[href^="mailto:"]').forEach(a => { if (C.email) { a.href = 'mailto:' + C.email; a.textContent = C.email; } }));
 
+  document.addEventListener('click', e => { const bt = e.target.closest('.sw[data-pal] button'); if (!bt) return; try { navigator.clipboard && navigator.clipboard.writeText(bt.dataset.hex); } catch (x) {} bt.classList.add('copied'); setTimeout(() => bt.classList.remove('copied'), 1200); });
   return { projects, settings: C, services: S.services || [], team: T.members || [] };
 })();
 

@@ -9,7 +9,8 @@
         "Brand Identity"
       ],
       "custom_page": true,
-      "cover_background": "#262626"
+      "cover_background": "#262626",
+      "accent": "#FFBD01"
     },
     {
       "title": "Sehre Innovative Company",
@@ -95,7 +96,8 @@
           "text": "See the full identity on Behance ↗",
           "url": "https://www.behance.net/gallery/251480459/Sehre-Inovative-Company-BRAND-IDENTITY"
         }
-      ]
+      ],
+      "accent": "#990012"
     },
     {
       "title": "YAD Studio",
@@ -120,6 +122,32 @@
           "type": "text",
           "label": "The idea",
           "body": "The logo is inspired by **the letter Y**, **a leaf motif** and the **bound angle yoga pose**.\n\nThree overlapping circles give the mark its curves, so the same shape reads as a letter, a growing leaf and a body at rest."
+        },
+        {
+          "type": "palette",
+          "label": "Colour",
+          "colors": [
+            {
+              "name": "Sage",
+              "hex": "#5F7371"
+            },
+            {
+              "name": "Deep Sage",
+              "hex": "#475C57"
+            },
+            {
+              "name": "Soft Sage",
+              "hex": "#95A39A"
+            },
+            {
+              "name": "Stone",
+              "hex": "#C5C8BB"
+            },
+            {
+              "name": "Cream",
+              "hex": "#ECF0E2"
+            }
+          ]
         },
         {
           "type": "image",
@@ -203,7 +231,8 @@
           "text": "See the full identity on Behance ↗",
           "url": "https://www.behance.net/gallery/240449357/Yoga-Studio-Visual-Identity"
         }
-      ]
+      ],
+      "accent": "#5F7371"
     },
     {
       "title": "KUTR Studio Branding",
@@ -228,6 +257,32 @@
           "type": "text",
           "label": "About KUTR Studio",
           "body": "Discover **KUTR, a design studio** built around **simplicity, clarity, and human connection.** Why a pigeon? Because just like a small messenger, it brings bits of content and meaning to its audience, piece by piece.\n\nAt its core, KUTR focuses on **UX and human interaction**, translating ideas into experiences that feel natural and purposeful. Every detail of the identity reflects this vision: approachable, dynamic, and rooted in thoughtful design."
+        },
+        {
+          "type": "palette",
+          "label": "Colour",
+          "colors": [
+            {
+              "name": "KUTR Blue",
+              "hex": "#2C65F8"
+            },
+            {
+              "name": "Ink",
+              "hex": "#0A0A0A"
+            },
+            {
+              "name": "Charcoal",
+              "hex": "#262626"
+            },
+            {
+              "name": "Mist",
+              "hex": "#E5E5E5"
+            },
+            {
+              "name": "Paper",
+              "hex": "#F7F7F7"
+            }
+          ]
         },
         {
           "type": "image",
@@ -277,7 +332,8 @@
           "text": "See the full branding on Behance ↗",
           "url": "https://www.behance.net/gallery/236553161/KUTR-STUDIO-visual-branding"
         }
-      ]
+      ],
+      "accent": "#2C65F8"
     }
   ]
 }

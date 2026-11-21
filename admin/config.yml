@@ -62,6 +62,7 @@ collections:
                 hint: "1860 × 1500 px (1.24 : 1) works best. JPG, PNG or GIF."
               - { name: cover_alt, label: Cover description (for screen readers), widget: string, required: false }
               - { name: cover_background, label: Cover background colour, widget: color, required: false, default: "#262626" }
+              - { name: accent, label: Project accent colour (replaces KUTR blue on this project page), widget: color, required: false }
               - { name: subtitle, label: Line under the title on the project page, widget: string, required: false }
               - name: hero
                 label: Big image at the top of the project page
