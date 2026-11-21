@@ -525,9 +525,10 @@ pre.viewer .caret{display:inline-block;width:7px;height:13px;background:var(--si
 @media (max-width:820px){.pal[style]{grid-template-columns:1fr 1fr!important}.persona[style]{grid-template-columns:1fr 1fr!important}}
 
 /* Pinogo uses its own accent, Amber Gold, instead of KUTR blue */
-.case[data-view="work-kutr"],a.card[href="#work-kutr"]{--signal:#ffbd01}
+.case[data-view="work-kutr"]{--signal:#ffbd01}
 .case[data-view="work-kutr"] .cmp .btn:hover:not([disabled]),.case[data-view="work-kutr"] .deploy .go:hover{color:#0a0a0a}
 .case[data-view="work-kutr"] .cmp .pills span.warn{background:#3a2c00;border-color:#3a2c00}
+.case[data-view="work-kutr"] .hello-slot{--signal:#2c65f8}
 </style></head><body>
 
 <div class="grid-lines" aria-hidden="true"><i></i></div>
@@ -1037,8 +1038,8 @@ class Globe {
     if (this.kind === 'hero' || this.kind === 'small') {
       const t = performance.now() / 1000;
       const px = cx + Math.cos(t * .7) * R * .55, py = cy - Math.sin(t * .9) * R * .3;
-      ctx.fillStyle = '#ffbd01'; ctx.beginPath(); ctx.arc(px, py, 3.2 * d, 0, 7); ctx.fill();
-      ctx.strokeStyle = 'rgba(255,189,1,.45)'; ctx.lineWidth = d; ctx.beginPath(); ctx.arc(px, py, (6 + (t * 12 % 14)) * d, 0, 7); ctx.stroke();
+      ctx.fillStyle = this.c.closest('[data-view="work-kutr"]') ? '#ffbd01' : '#2c65f8'; ctx.beginPath(); ctx.arc(px, py, 3.2 * d, 0, 7); ctx.fill();
+      ctx.strokeStyle = this.c.closest('[data-view="work-kutr"]') ? 'rgba(255,189,1,.45)' : 'rgba(44,101,248,.4)'; ctx.lineWidth = d; ctx.beginPath(); ctx.arc(px, py, (6 + (t * 12 % 14)) * d, 0, 7); ctx.stroke();
     }
   }
 }
