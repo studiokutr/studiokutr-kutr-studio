@@ -165,6 +165,7 @@ collections:
               - { name: role, label: Role, widget: string }
               - { name: photo, label: Portrait, widget: image, hint: "Square image, e.g. 360 × 360 px pixel portrait" }
               - { name: linkedin, label: LinkedIn address, widget: string, required: false }
+              - { name: email, label: Work email, widget: string, required: false, hint: "e.g. nick@kutr.studio" }
 
       # ---------------- SERVICES ----------------
       - name: services

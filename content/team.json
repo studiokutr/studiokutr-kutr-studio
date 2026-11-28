@@ -4,19 +4,22 @@
       "name": "Nick",
       "role": "Managing Director",
       "photo": "images/pixel-portrait-of-nick.png",
-      "linkedin": "https://www.linkedin.com/company/kutr"
+      "linkedin": "https://www.linkedin.com/company/kutr",
+      "email": "nick@kutr.studio"
     },
     {
       "name": "Paeez",
       "role": "Design Director",
       "photo": "images/pixel-portrait-of-paeez.png",
-      "linkedin": "https://www.linkedin.com/in/paeez-mousavi/"
+      "linkedin": "https://www.linkedin.com/in/paeez-mousavi/",
+      "email": "paeez@kutr.studio"
     },
     {
       "name": "Maryam",
       "role": "Graphic Designer",
       "photo": "images/pixel-portrait-of-maryam.png",
-      "linkedin": "https://www.linkedin.com/company/kutr"
+      "linkedin": "https://www.linkedin.com/company/kutr",
+      "email": "maryam@kutr.studio"
     }
   ]
 }

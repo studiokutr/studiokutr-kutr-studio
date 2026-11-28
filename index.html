@@ -533,6 +533,9 @@ pre.viewer .caret{display:inline-block;width:7px;height:13px;background:var(--si
 .case .pal-panel .sw{gap:10px}
 .case .pal-panel .sw .chip{aspect-ratio:auto;height:clamp(150px,18vw,260px)}
 .case .hello-slot{--signal:#2c65f8}
+.mate .em{font:400 12px var(--mono);color:var(--ink);border-bottom:1px solid transparent;transition:color .2s steps(2),border-color .2s steps(2)}
+.mate .em:hover{color:var(--brand);border-bottom-color:currentColor}
+@media (max-width:760px){.mate .em{font-size:10px}}
 </style></head><body>
 
 <div class="grid-lines" aria-hidden="true"><i></i></div>
@@ -820,7 +823,7 @@ window.KUTR_READY = (async () => {
 
   /* team */
   const team = document.getElementById('team');
-  if (team) team.outerHTML = (T.members || []).map(m => `<figure class="mate"><div class="ph"><img src="${src(m.photo)}" alt="Pixel portrait of ${esc(m.name)}" width="360" height="360"></div><figcaption><span class="nm">${esc(m.name)}${m.linkedin ? `<a class="li" href="${esc(m.linkedin)}" target="_blank" rel="noopener" aria-label="${esc(m.name)} on LinkedIn">${LI}</a>` : ''}</span><small>${esc(m.role)}</small></figcaption></figure>`).join('');
+  if (team) team.outerHTML = (T.members || []).map(m => `<figure class="mate"><div class="ph"><img src="${src(m.photo)}" alt="Pixel portrait of ${esc(m.name)}" width="360" height="360"></div><figcaption><span class="nm">${esc(m.name)}${m.linkedin ? `<a class="li" href="${esc(m.linkedin)}" target="_blank" rel="noopener" aria-label="${esc(m.name)} on LinkedIn">${LI}</a>` : ''}</span><small>${esc(m.role)}</small>${m.email ? `<a class="em" href="mailto:${esc(m.email)}">${esc(m.email)}</a>` : ''}</figcaption></figure>`).join('');
 
   /* settings: intro, hello text, email, socials */
   const tpl = document.getElementById('hello-tpl');
