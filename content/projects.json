@@ -9,8 +9,10 @@
         "Brand Identity"
       ],
       "custom_page": true,
-      "cover_background": "#262626",
-      "accent": "#FFBD01"
+      "cover_background": "#131313",
+      "accent": "#FFBD01",
+      "cover": "images/pinogo-logo-in-amber-on-black.jpg",
+      "cover_alt": "Pinogo logo in amber on black"
     },
     {
       "title": "Sehre Innovative Company",
